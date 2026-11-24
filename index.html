@@ -1564,7 +1564,7 @@ document.addEventListener("click",function(e){var el=e.target.closest&&e.target.
  if(d.wkf){S.en=S.en||{};S.en[date]=d.wkf;S.enD=td;if(S.wmin)delete S.wmin[date];WGI=null;WKGO=false;save();render();buzz(12);return}
  if(d.wkt){S.wt=d.wkt;S.wtD=date;S.smode=d.wkt==="y"?"y":"w";WGI=null;WKGO=false;save();render();buzz(8);return}
  if(d.wkm){S.wmin=S.wmin||{};var c=wMin();S.wmin[date]=c===10?20:(c===20?30:10);WGI=null;save();render();buzz(8);return}
- if(d.wkgo){WKGO=true;WKPB=false;WGI=null;save();render();buzz(22);window.scrollTo(0,0);return}
+ if(d.wkgo){var pk=wtype()==="y"?"y":"w";if(r.pfBy!==pk){r.pfp=false;r.pfm={};r.pfs={};r.pfBy=pk}WKGO=true;WKPB=false;WGI=null;save();render();buzz(22);window.scrollTo(0,0);return}
  if(d.wkx){WKGO=false;WKPB=false;yStop();render();buzz(8);return}
  if(d.wkpf){r.pfp=true;WKPB=false;save();render();buzz(22);return}
  if(d.wkpb){WKPB=true;render();buzz(8);return}
