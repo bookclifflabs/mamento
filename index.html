@@ -1289,7 +1289,7 @@ function wkRows(){var t=wtype(),r=[],m=wMin(),h='',row=function(a,b,pf){return '
  if(r.length>3)h+=row('<span style="color:var(--mute)">+ '+(r.length-3)+' more</span>',"");
  return h}
 function cycSug(){var ci=S.cyc&&cycInfo(date);if(!ci)return null;var T=[["y","Gentle fits today."],["w","Good day to build."],["w","Warm up well. Form first."],["n","Steady and lighter is fine."]][ci.ph];return {t:T[0],tx:"Cycle day "+ci.day+". "+T[1]}}
-function wkName(t,m){var N={w:{10:"Quick Strength",20:"Steady Strength",30:"Full Strength"},n:{10:"Quick Reset",20:"Steady Flow",30:"Full Flow"},y:{10:"Gentle Reset",20:"Slow Flow",30:"Long Stretch"}};return (N[t]||N.w)[m]||"Workout"}
+function wkName(t,m){var N={w:{10:"Quick spark",20:"Steady build",30:"Strong finish"},n:{10:"Tiny reset",20:"Easy flow",30:"Whole-body flow"},y:{10:"Deep breath",20:"Slow unwind",30:"Long exhale"}};return (N[t]||N.w)[m]||"Workout"}
 function wkTc(k){return {w:"var(--acc)",n:"var(--acc2)",y:"var(--acc3)"}[k]}
 function wkDeep(x){return isDarkNow()?x:"color-mix(in srgb,"+x+" 72%,#000)"}
 function wkG(x){return "linear-gradient(135deg,color-mix(in srgb,"+x+" 55%,#fff),"+x+")"}
